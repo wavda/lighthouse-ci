@@ -11,7 +11,6 @@ jobs:
       - name: install Node.js
       
       - uses: browser-actions/setup-chrome@latest
-
       - run: chrome --version
         uses: actions/setup-node@v2
         with:

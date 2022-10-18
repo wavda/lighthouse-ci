@@ -1,15 +1,30 @@
 name: Lighthouse CI
-on: push
+on: 
+  pull_request:
+      branches:
+        - master
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: install Node.js
+      - uses: browser-actions/setup-chrome@latest
+
+      - run: chrome --version
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: |
-            https://uat-front.niagahoster.co.id/
-          budgetPath: '.github/lighthouse/budget.json'  
-          uploadArtifacts: true # save results as an action artifacts
-          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+            https://www.niagahoster.co.id/
+            https://www.niagahoster.co.id/afiliasi
+          configPath: '.github/lighthouse/lighthouserc.json'
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+      env:
+        PR_NUMBER: ${{ github.event.pull_request.number }}

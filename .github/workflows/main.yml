@@ -26,5 +26,3 @@ jobs:
           configPath: '.github/lighthouse/lighthouserc.json'
           uploadArtifacts: true
           temporaryPublicStorage: true
-      env:
-        PR_NUMBER: ${{ github.event.pull_request.number }}

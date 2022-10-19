@@ -16,7 +16,6 @@ jobs:
           urls: |
             https://$URL_DOMAIN/
             https://$URL_DOMAIN/afiliasi
-          budgetPath: '.github/lighthouse/desktop-budget.json'
-          configPath: '.github/lighthouse/desktop-custom-config.json'
+          budgetPath: '.github/lighthouse/mobile-budget.json'
           uploadArtifacts: true
           temporaryPublicStorage: true

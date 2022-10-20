@@ -5,7 +5,7 @@ on:
         - master
 jobs:
   lighthouse:
-    runs-on: [self-hosted, linux]
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
     - name: Install dependencies
@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: 14.x
 
-    - uses: browser-actions/setup-chrome@latest
+    - run: sudo apt-get install chromium-browser xvfb
     - run: chrome --version
 
     - name: Audit URLs using Lighthouse

@@ -27,9 +27,9 @@ jobs:
         URL_DOMAIN: 'www.niagahoster.co.id'
       with:
         urls: |
-          https://$URL_DOMAIN/
+          https://$URL_DOMAIN/reseller-hosting
           https://$URL_DOMAIN/afiliasi
-        configPath: '.github/lighthouse/lighthouserc.json'
+        configPath: '.github/lighthouse/mobile-lighthouserc.json'
         budgetPath: '.github/lighthouse/mobile-budget.json'
         uploadArtifacts: true
         temporaryPublicStorage: true

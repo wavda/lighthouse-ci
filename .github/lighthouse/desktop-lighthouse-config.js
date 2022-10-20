@@ -1,8 +1,9 @@
 module.exports = {
     extends: 'lighthouse:default',
     settings: {
+      formFactor: "desktop",
+      screenEmulation: 'disabled',
       onlyCategories: ['performance'],
-      throttlingMethod: "provided",
-      screenEmulation: "disabled"
+      throttlingMethod: "provided"
   }
 }

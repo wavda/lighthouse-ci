@@ -5,7 +5,6 @@ module.exports = {
         passes: [
             {
                 passName: 'fastPass',
-                recordTrace: true,
                 useThrottling: false,
             }
         ]

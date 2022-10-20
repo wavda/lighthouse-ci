@@ -1,9 +1,12 @@
 {
     "ci": {
-      "collect": {
-        "settings": {
-          "configPath": ".github/lighthouse/desktop-lighthouse-config.js"
+        "collect": {
+            "numberOfRuns": 1,
+            "settings": {
+                "configPath": ".github/lighthouse/desktop-lighthouse-config.js",
+                "chromeFlags": "--no-sandbox --disable-dev-shm-usage --headless --in-process-gpu",
+                "saveAssets": false
+            }
         }
-      }
     }
-  }
+}

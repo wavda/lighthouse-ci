@@ -1,10 +1,10 @@
 {
-    "ci": {
-      "collect": {
-        "numberOfRuns": 1,
-        "settings": {
-          "configPath": "./lighthouse-config.js"
-        }
+  "ci": {
+    "collect": {
+      "numberOfRuns": 1,
+      "settings": {
+        "configPath": ".github/lighthouse/lighthouse-config.js"
       }
     }
   }
+}
